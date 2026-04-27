@@ -1,0 +1,40 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "name": "서울", "population": 9776000 },
+      "geometry": { "type": "Point", "coordinates": [126.9779, 37.5665] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "부산", "population": 3404000 },
+      "geometry": { "type": "Point", "coordinates": [129.0756, 35.1796] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "인천", "population": 2957000 },
+      "geometry": { "type": "Point", "coordinates": [126.7052, 37.4563] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "대구", "population": 2418000 },
+      "geometry": { "type": "Point", "coordinates": [128.6014, 35.8714] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "대전", "population": 1454000 },
+      "geometry": { "type": "Point", "coordinates": [127.3845, 36.3504] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "광주", "population": 1441000 },
+      "geometry": { "type": "Point", "coordinates": [126.8514, 35.1595] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "제주", "population": 676000 },
+      "geometry": { "type": "Point", "coordinates": [126.5312, 33.4996] }
+    }
+  ]
+}
