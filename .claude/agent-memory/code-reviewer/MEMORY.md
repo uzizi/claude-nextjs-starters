@@ -1,0 +1,1 @@
+- [Web GIS 스타터킷 아키텍처](project_architecture.md) — 프로젝트 구조, 상태 관리, OL 패턴, 2026-04-29 리뷰에서 발견된 이슈 목록
