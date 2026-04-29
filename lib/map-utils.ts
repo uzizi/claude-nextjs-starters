@@ -10,8 +10,7 @@ import type { LonLat } from "@/types/map";
  * OpenLayers View의 기본 투영은 EPSG:3857이므로 반드시 변환 필요
  */
 export function lonLatToMercator(coord: LonLat): [number, number] {
-  const projected = fromLonLat(coord);
-  return [projected[0], projected[1]];
+  return fromLonLat(coord) as [number, number];
 }
 
 /**

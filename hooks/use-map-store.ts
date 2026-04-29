@@ -1,5 +1,3 @@
-"use client";
-
 import { useState, useCallback } from "react";
 import type { CoordinateState, LayerConfig } from "@/types/map";
 

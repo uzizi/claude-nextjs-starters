@@ -6,7 +6,6 @@ import { Button } from "@/components/ui/button";
 import {
   Tooltip,
   TooltipContent,
-  TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import {
@@ -74,26 +73,24 @@ export default function MapToolbar({
   ];
 
   return (
-    <TooltipProvider delayDuration={300}>
-      <div className="absolute right-3 top-3 z-10 flex flex-col gap-1 rounded-lg border border-border bg-background/90 p-1 shadow-md backdrop-blur-sm">
-        {tools.map(({ icon: Icon, label, onClick }) => (
-          <Tooltip key={label}>
-            <TooltipTrigger asChild>
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={onClick}
-                aria-label={label}
-              >
-                <Icon className="size-4" />
-              </Button>
-            </TooltipTrigger>
-            <TooltipContent side="left">
-              <p>{label}</p>
-            </TooltipContent>
-          </Tooltip>
-        ))}
-      </div>
-    </TooltipProvider>
+    <div className="absolute right-3 top-3 z-10 flex flex-col gap-1 rounded-lg border border-border bg-background/90 p-1 shadow-md backdrop-blur-sm">
+      {tools.map(({ icon: Icon, label, onClick }) => (
+        <Tooltip key={label}>
+          <TooltipTrigger asChild>
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={onClick}
+              aria-label={label}
+            >
+              <Icon className="size-4" />
+            </Button>
+          </TooltipTrigger>
+          <TooltipContent side="left">
+            <p>{label}</p>
+          </TooltipContent>
+        </Tooltip>
+      ))}
+    </div>
   );
 }

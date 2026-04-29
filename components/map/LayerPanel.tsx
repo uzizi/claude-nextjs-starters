@@ -7,7 +7,6 @@ import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
 import { IconStack2 } from "@tabler/icons-react";
 import { INITIAL_LAYERS } from "@/hooks/use-map-store";
-import type { LayerConfig } from "@/types/map";
 
 interface LayerPanelProps {
   layerVisibility: Record<string, boolean>;
@@ -22,8 +21,6 @@ export default function LayerPanel({
   layerVisibility,
   onToggle,
 }: LayerPanelProps) {
-  const layers: LayerConfig[] = INITIAL_LAYERS;
-
   return (
     <Card className="h-full rounded-none border-0 border-r">
       <CardHeader className="px-4 py-3">
@@ -35,7 +32,7 @@ export default function LayerPanel({
       <Separator />
       <CardContent className="px-4 py-3">
         <ul className="space-y-3">
-          {layers.map((layer) => (
+          {INITIAL_LAYERS.map((layer) => (
             <li key={layer.id} className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 {layer.color && (

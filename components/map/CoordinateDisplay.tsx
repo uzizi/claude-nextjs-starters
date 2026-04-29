@@ -16,9 +16,12 @@ export default function CoordinateDisplay({
   zoom,
 }: CoordinateDisplayProps) {
   const { lon, lat } = coordinate;
+  // 음수 경도는 서경(W), 음수 위도는 남위(S)로 표기
+  const lonDir = lon !== null && lon >= 0 ? "E" : "W";
+  const latDir = lat !== null && lat >= 0 ? "N" : "S";
   const coordText =
     lon !== null && lat !== null
-      ? `${lon.toFixed(4)}°E  ${lat.toFixed(4)}°N`
+      ? `${Math.abs(lon).toFixed(4)}°${lonDir}  ${Math.abs(lat).toFixed(4)}°${latDir}`
       : "지도 위에 마우스를 올려보세요";
 
   return (
